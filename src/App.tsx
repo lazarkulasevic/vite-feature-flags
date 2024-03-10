@@ -9,7 +9,9 @@ function App() {
     <>
       <div>
         <img src={viteLogo} className="logo" alt="Vite logo" />
-        <img src={reactLogo} className="logo react" alt="React logo" />
+        <Feature flag="react_logo">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </Feature>
       </div>
       <h1>Feature Flags</h1>
       <div className="card">
