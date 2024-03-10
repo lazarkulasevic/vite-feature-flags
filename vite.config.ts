@@ -2,11 +2,12 @@ import { defineConfig } from "vite"
 import React from "@vitejs/plugin-react-swc"
 import envConfig from "./env.json"
 
-const areEnvConfigsIdentical = Object.keys(envConfig).every((key) => {
+type Env = keyof typeof envConfig
+
+const areEnvConfigsIdentical = Object.keys(envConfig).every((env) => {
   return (
-    JSON.stringify(
-      Object.keys(envConfig[key as keyof typeof envConfig].features)
-    ) === JSON.stringify(Object.keys(envConfig.development.features))
+    JSON.stringify(Object.keys(envConfig[env as Env].features)) ===
+    JSON.stringify(Object.keys(envConfig.development.features))
   )
 })
 
@@ -23,9 +24,7 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [React()],
     define: {
-      __FEATURES__: JSON.stringify(
-        envConfig[mode as keyof typeof envConfig].features
-      ),
+      __FEATURES__: JSON.stringify(envConfig[mode as Env].features),
     },
   }
 })
