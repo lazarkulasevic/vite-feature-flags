@@ -2,7 +2,7 @@
 
 Probably the fastest way to add feature flags to your Vite project.
 
-Environment configs are located in `env.json` and it looks like this.
+Features configuration for all environments is located in `env.json` and it looks like this:
 
 ```json
 {
@@ -29,6 +29,6 @@ Environment configs are located in `env.json` and it looks like this.
 }
 ```
 
-### Result
+## Result: DEV & PROD
 
 ![image](https://github.com/lazarkulasevic/vite-feature-flags/assets/68285821/04934d6c-25b1-4517-915f-c283174cfae3)
