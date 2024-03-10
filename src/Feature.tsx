@@ -6,8 +6,8 @@ type FeatureProps = {
 }
 
 const Feature = ({ flag, children }: FeatureProps) => {
-  const hasFeature = useFeature(flag)
-  return hasFeature ? <>{children}</> : null
+  const isFeatureEnabled = useFeature(flag)
+  return isFeatureEnabled ? <>{children}</> : null
 }
 
 export default Feature
