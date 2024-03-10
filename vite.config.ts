@@ -22,7 +22,11 @@ export default defineConfig(({ mode }) => {
   }
 
   return {
+    // Hosted on Github Pages under url https://lazarkulasevic.github.io/vite-feature-flags/
+    base: "/vite-feature-flags/",
+
     plugins: [React()],
+
     define: {
       __FEATURES__: JSON.stringify(envConfig[mode as Env].features),
     },
