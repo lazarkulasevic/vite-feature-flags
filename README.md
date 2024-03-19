@@ -29,6 +29,6 @@ Features configuration for all environments is located in `env.json` and it look
 }
 ```
 
-## Result: DEV & PROD
+## Result: PROD & DEV
 
 ![image](https://github.com/lazarkulasevic/vite-feature-flags/assets/68285821/04934d6c-25b1-4517-915f-c283174cfae3)
